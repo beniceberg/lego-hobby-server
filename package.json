@@ -1,0 +1,25 @@
+{
+  "name": "lego-hobby-server",
+  "version": "0.0.1",
+  "description": "server for lego hobby",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beniceberg/lego-hobby-server.git"
+  },
+  "author": "Ben Iceberg (ben.iceberg@gmail.com)",
+  "license": "ISC",
+  "homepage": "https://github.com/beniceberg/lego-hobby-server#readme",
+  "dependencies": {
+    "@google-cloud/storage": "^5.18.1",
+    "@google-cloud/vision": "^2.4.2",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.2",
+    "multer": "^1.4.4",
+    "nodemon": "^1.17.1"
+  }
+}
