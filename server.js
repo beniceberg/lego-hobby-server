@@ -11,7 +11,7 @@ require('dotenv').config()
 const { getSimilarProductsFile } = require('./utils/vision');
 const { uploadFile } = require('./utils/storage');
 
-const tempFolder = 'tmp';
+const tempFolder = '/tmp';
 const upload = multer({
   dest: tempFolder,
   type: Buffer
@@ -22,7 +22,7 @@ app.use(express.json());
 
 app.post('/upload', upload.single('upload'), async (req, res) => {
   console.log('local file', req.file.filename);
-  const sourceFilePath = `./${tempFolder}/${req.file.filename}`;
+  const sourceFilePath = `${tempFolder}/${req.file.filename}`;
   const destFilePath = `search/images/${req.file.filename}.jpg`;
   await uploadFile(sourceFilePath, destFilePath);
   const result = await getSimilarProductsFile(sourceFilePath);
